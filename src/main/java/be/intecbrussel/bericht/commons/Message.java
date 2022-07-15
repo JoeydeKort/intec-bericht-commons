@@ -1,26 +1,24 @@
 package be.intecbrussel.bericht.commons;
 
-import lombok.*;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+public interface Message {
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class Message {
+    @SuppressWarnings("all")
+    Long getId();
 
+    @SuppressWarnings("all")
+    String getMessage();
 
-    private Long id;
+    @SuppressWarnings("all")
+    String getUsername();
 
-    @NotNull
-    @Size(min = 1)
-    private String message;
+    @SuppressWarnings("all")
+    void setId(final Long id);
 
-    @NotNull
-    @Size(min = 1)
-    private String username;
+    @SuppressWarnings("all")
+    void setMessage(final String message);
+
+    @SuppressWarnings("all")
+    void setUsername(final String username);
 
 }
